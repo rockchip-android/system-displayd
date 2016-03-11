@@ -38,6 +38,11 @@ endif
 ifeq ($(strip $(PLATFORM_VERSION)),4.4.4)
 	LOCAL_CFLAGS += -DANDROID_4_4
 endif
+
+ifeq (1,$(strip $(shell expr $(PLATFORM_SDK_VERSION) \>= 23)))
+	LOCAL_CFLAGS += -DANDROID_6
+endif
+
 LOCAL_SHARED_LIBRARIES := libcutils libnetutils libcrypto libsysutils
 
 ifeq ($(PRODUCT_HAVE_HDMIHDCP2), true)

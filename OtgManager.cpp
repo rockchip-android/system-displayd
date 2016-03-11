@@ -3,7 +3,7 @@
 
 #define LOG_TAG "OtgManager"
 #include <cutils/log.h>
-
+#include <string.h>
 #include "OtgManager.h"
 
 

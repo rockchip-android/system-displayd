@@ -9,6 +9,7 @@
 #include <fcntl.h>
 #include <linux/fb.h>
 #include <signal.h>
+#include <string.h>
 #include <sys/wait.h>
 #include <cutils/properties.h>
 

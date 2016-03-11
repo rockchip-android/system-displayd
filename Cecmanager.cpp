@@ -6,6 +6,7 @@
 #include <cutils/log.h>
 #include <linux/ioctl.h>
 #include <linux/uinput.h>
+#include <string.h>
 #include <sys/prctl.h>
 #include <poll.h>
 #include "Cecmanager.h"

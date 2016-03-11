@@ -29,7 +29,7 @@
 #define LOG_TAG "DisplayD"
 
 #include <cutils/log.h>
-
+#include <string.h>
 #include "NetlinkManager.h"
 #include "NetlinkHandler.h"
 

@@ -27,6 +27,7 @@
 #define LOG_TAG "CommandListener"
 #include <cutils/log.h>
 
+#include <string.h>
 #include <sysutils/SocketClient.h>
 #include "Config.h"
 #include "CommandListener.h"
