@@ -32,7 +32,7 @@ LOCAL_CFLAGS :=
 ifeq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
 	LOCAL_CFLAGS += -DDISPLAY_POLICY_BOX
 endif
-ifeq ($(strip $(TARGET_BOARD_PLATFORM)),rk3228)
+ifneq ($(filter rk3228 rk322x, $(strip $(TARGET_BOARD_PLATFORM))), )
 	LOCAL_CFLAGS += -DRK3228
 endif
 ifeq ($(strip $(PLATFORM_VERSION)),4.4.4)
