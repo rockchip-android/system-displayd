@@ -370,7 +370,7 @@ static int insmod(const char *filename)
 	ALOGD("insmod %s", filename);
 	memset(&name, 0, sizeof(name));
 	ret = uname(&name);
-	if (ret == 0 && name.release) {
+	if (ret == 0 && name.release[0] != '/0') {
 		// try insmod filename.x.x.x 
 		strncat(filename_release, filename, sizeof(filename_release) - 1);
 		strncat(filename_release, ".", sizeof(filename_release) - 1);

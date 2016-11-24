@@ -678,7 +678,7 @@ void DisplayManager::saveConfig(void) {
 
 	for(node = main_display_list; node != NULL; node = node->next) {
 		if(node->type == DISPLAY_INTERFACE_HDMI) {
-			if(node->mode) {
+			if(node->mode[0] != '\0') {
 				base_paramer.hdmi.type = node->type;
 				base_paramer.hdmi.interlaced = 0;
 
@@ -704,7 +704,7 @@ void DisplayManager::saveConfig(void) {
 				ALOGD("[%s] hdmi_mode %s\n", __FUNCTION__,node->mode);
 			}
 		} else if(node->type == DISPLAY_INTERFACE_TV) {
-			if(node->mode) {
+			if(node->mode[0] != '\0') {
 				sscanf(node->mode, "%dx%di-%d",
 				       &base_paramer.tve.xres,
 				       &base_paramer.tve.yres,
