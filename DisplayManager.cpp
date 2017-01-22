@@ -74,7 +74,7 @@ DisplayManager::DisplayManager() {
 	ALOGD("[%s] VER 3.0", __FUNCTION__);
 	powerup = 0;
 	#if (DISPLAY_UNTIL_WAKEUP == 0)
-	init();
+	//init();
 		#if defined(RK3228) && defined(ANDROID_4_4)
 		if (access(HDMI_DEV_PATH, R_OK | W_OK) == 0) {
 			HdmicecManage *mHdmicecManage = HdmicecManage::GetInstance();

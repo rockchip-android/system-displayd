@@ -90,6 +90,7 @@ int main() {
 		ALOGE("Unable to start NetlinkManager (%s)", strerror(errno));
 		exit(1);
 	}
+	nm->mDisplayManager->init();
 #if ENABLE_OTG_MANAGER
 	/* Start otg manager */
 	om = new OtgManager();
