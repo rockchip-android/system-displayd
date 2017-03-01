@@ -591,6 +591,7 @@ static char const *const device_template[] =
 	"/dev/block/platform/ff0f0000.rksdmmc/by-name/baseparamer",
 	"/dev/block/platform/fe330000.sdhci/by-name/baseparamer",
 	"/dev/block/rknand_baseparamer",
+        "/dev/block/platform/ff520000.rksdmmc/by-name/baseparamer",
 	NULL
 };
 
