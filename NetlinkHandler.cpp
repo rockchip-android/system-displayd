@@ -109,8 +109,8 @@ void NetlinkHandler::notifyInterfaceAdded(const char *name, const char *screen) 
 	int display = 0;
 	if(screen && !strcmp(screen, "1"))
 		display = 1;
-
-	mNm->mDisplayManager->setHDMIEnable(display);
+	if (!strncmp(name, "HDMI", 4))
+		mNm->mDisplayManager->setHDMIEnable(display);
 	snprintf(msg, sizeof(msg), "Iface added %s", name);
 	ALOGW("Send msg %s", msg);
 	//    mNm->getBroadcaster()->sendBroadcast(ResponseCode::InterfaceChange,
@@ -129,7 +129,8 @@ void NetlinkHandler::notifyInterfaceRemoved(const char *name, const char *screen
 	int display = 0;
 	if(screen && !strcmp(screen, "1"))
 		display = 1;
-	mNm->mDisplayManager->setHDMIDisable(display);
+	if (!strncmp(name, "HDMI", 4))
+		mNm->mDisplayManager->setHDMIDisable(display);
 	snprintf(msg, sizeof(msg), "Iface removed %s", name);
 	ALOGW("Send msg %s", msg);
 	//    mNm->getBroadcaster()->sendBroadcast(ResponseCode::InterfaceChange,
